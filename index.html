@@ -53,7 +53,6 @@ width: 210px;
 margin-left: 20px;
 
 }
-
 .drop2 {
   background-color: #0b740f;
   color: white;
@@ -62,27 +61,50 @@ margin-left: 20px;
   text-align: center;
   border: none;
   font-size: 20px;
+  display: block;
+  cursor: pointer;
+  
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  width: 200px;
-  background-color: rgb(222, 213, 213)
+.drop {
+display: inline-block;
+margin-top: 20px;
 }
-li a {
+
+
+.drop1 {
+width: 400px;
+background-color: gray;
+display: none;
+position: absolute;
+
+}
+
+.drop1 a{
+display: block;
+padding: 15px 8px;
+color: black;
+text-decoration: none;
+
+}
+.drop1 a:hover {
+  background-color: green;
+}
+.drop:hover .drop1 {
   display: block;
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-size: 17px;
 }
-.link {
-  margin-top: 20px;
-  width: 300px;
-  margin-left: 20px;
-  }
+.drop:hover .drop2 {
+  background-color:lightcoral;
+  color: white;
+}
+.big {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+
 </style>
 
 </head>
@@ -107,21 +129,15 @@ li a {
        <input type="submit" value="Submit">
         </form>
 </div>
-    <div class="drop">
+   <div class="drop">
       <button class="drop2">Dropdown</button>
-      <p style="font-size: 20px;">this is a dropdown menu</p>
-    
+      <div class="drop1">
+       <a href="#">Link 1</a>
+       <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
     </div>
-    <div class="link">
-      <button class="drop2">Dropdown</button>
-
-      <ul>
-  <li>
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </li>
-</ul>
+  </div>
+      
     </div>
   </body>
 </html>
